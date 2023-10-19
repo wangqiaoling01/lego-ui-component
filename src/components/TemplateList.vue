@@ -34,19 +34,21 @@
     </div>
   </template>
   
-  <script lang="ts">
-  import { defineComponent, PropType } from 'vue'
-  import { TemplateProps } from '../store/templates'
-  export default defineComponent({
-    name: 'template-list',
-    props: {
-      list: {
-        type: Array as PropType<TemplateProps[]>,
-        required: true
-      }
+<script lang="ts">
+import { defineComponent } from 'vue'
+import type { PropType } from 'vue'
+import type { TemplateProps } from '../store/templates'
+
+export default defineComponent({
+name: 'template-list',
+props: {
+    list: {
+    type: Array as PropType<TemplateProps[]>,
+    required: true
     }
-  })
-  </script>
+}
+})
+</script>
   
   <style>
   .poster-item {
